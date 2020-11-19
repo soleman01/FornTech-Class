@@ -5,16 +5,24 @@ body {
 
 header.main_header {
     width: 100%;
-    height: 170px;
+    min-height: 170px !important;
     background-color: #537115;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-top:40px
+
 }
 
 header.main_header .menu-bar div {
     float: left;
+}header.main_header .main-menu div {
+    float: right;
 }
 
+
+
 .logo {
-    margin: 10px 0px 0px 10px;
+    /*margin: 10px 0px 0px 10px;*/
 }
 
 .title h1 {
@@ -38,10 +46,11 @@ ul > li {
     border-radius: 5px;
     margin: 90px 0px 10px 60px;
     padding: 5px 20px;
+    list-style: none;
 }
 
 .main_menu li a {
-    color: #BF4716;
+    color: #fff;
     text-shadow: 1px 1px 1px #000;
 }
 

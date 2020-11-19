@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+nav ul {
+    list-style: none;
+    padding: 0px;
+}
+nav ul li a {
+    color: rgb(9, 98, 54);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: smaller;
+    padding: 10px 10px;
+    display: block;
+    line-height: 1;
+} 
+nav ul li {
+    border-bottom: 1px dotted rgb(9, 98, 54);
+}
+nav .logo {
+    background-color: rgba(141, 143, 9, 0.616);
+    line-height: 0;
+    padding: 8px 0px;
+}
+nav .logo {
+    text-align: center;
+}
+nav .logo, nav ul {
+    margin: 0px;
+}
+
+/*Styling for larger devices*/
+@media only screen and (min-width:30em){
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(141, 143, 9, 0.616);
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        background-color: none;
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        border-bottom: none;
+        flex: 1 0 auto;
+        position: relative;
+    }
+    nav .logo {
+        padding: 0px;
+        margin-left: 1rem;
+    }
+    nav .logo img {
+        height: 100px;
+    }
+    nav ul li a {
+        padding: 1.2rem 1rem;
+    }
+    nav ul li a::before, nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0%;
+        height: 2px;
+        background: rgb(255, 255, 255);
+        transition: .2s width ease-in-out;
+    }
+    nav ul li a::before {
+        left: 0;
+    }
+    nav ul li a:hover::after,nav ul li a:hover::before {
+        width: 50%;
+    }
+}
+
